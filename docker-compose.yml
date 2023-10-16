@@ -6,10 +6,3 @@ services:
     container_name: rd01
     ports:
      - '6379:6379'
-
-  celery:
-    build: .
-    container_name: cl01
-    command: celery -A server worker -l info
-    depends_on:
-      - redis
